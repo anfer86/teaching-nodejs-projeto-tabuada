@@ -4,14 +4,14 @@ Este é um projeto para ensino de Node.js. O objetivo deste projeto é aprender 
 
 ## Pré-requisitos
 
-* Node.js. Para instalar acessar https://nodejs.org, baixar e instalar. Para testar abrir um terminal e digitar:
+* Node.js (https://nodejs.org). Verifique a instalação digitando:
 ```bash
-node --version
+$ node --version
 ```
 
-* Cliente Git. Para instalar acessar https://git-scm.com, baixar e instalar. Para testar abrir um terminal e digitar:
+* Cliente Git (https://git-scm.com). Verifique a instalação digitando:
 ```bash
-git --version
+$ git --version
 ```
 
 ## Instalação
@@ -26,8 +26,8 @@ $ npm install
 ## Utilização
 
 Para rodar a aplicação executar:
-```
-nodemon app
+```bash
+$ nodemon app
 ```
 A aplicação está configurada para rodar na porta `3000`, portanto para acessar a nossa aplicação entrar no endereço http://localhost:3000. Para mudar o número da porta editar o arquivo `app.js`. 
 
@@ -36,9 +36,9 @@ A aplicação está configurada para rodar na porta `3000`, portanto para acessa
 O projeto foi desenvolvido com:
 
 * [Node.js](https://nodejs.org/en/) - Plataforma de desenvolvimento Javascript
-* [Sublime Text](https://www.sublimetext.com/) - Editor de texto para programação.
+* [Sublime Text](https://www.sublimetext.com/) - Editor de texto para programação
 
-As instruções para desenvolvimento da aplicação deste projeto estão no arquivo `instructions.md` ou `instructions.html`.
+As instruções para desenvolvimento desta aplicação estão no arquivo `instructions.md` ou `instructions.html`.
 
 ## Autores
 
