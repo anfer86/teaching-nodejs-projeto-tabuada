@@ -1,10 +1,10 @@
-module.exports = function(appliction){
+module.exports = function(application){
 
-    appliction.get('/', function(req,res){    	
+    application.get('/', function(req,res){    	
         res.render('principal');
     });
 
-    appliction.post('/gerarTabuada', function(req,res){ 
+    application.post('/gerarTabuada', function(req,res){ 
     	console.log('Dados recebidos na requisição:', req.body);
         res.render('calculoTabuada', { numero : req.body.numero } );
     });

@@ -89,9 +89,9 @@ Isso ocorre pelo fato de que a aplicação está online mas não tem nada para r
 
 1. Vamos criar um arquivo de rotas na pasta routes para orientar a nossa aplicação a que responder quando for feito um pedido na raíz ('/') da nossa aplicação. 
 ```js
-module.exports = function(appliction){
+module.exports = function(application){
 
-    appliction.get('/', function(req,res){
+    application.get('/', function(req,res){
         res.send('<h1>Projeto Tabuada</h1>');
     });
     
@@ -131,9 +131,9 @@ Quando a aplicação receber uma requisição (req) HTTP, que pede o diretório 
 
 3. Devemos alterar a rota raíz '/' para que ao invés de enviar (send) uma mensagem ao cliente renderize uma página web. Para isso alteramos o conteúdo da rota para o seguinte código:
 ```js
-module.exports = function(appliction){
+module.exports = function(application){
 
-    appliction.get('/', function(req,res){    	
+    application.get('/', function(req,res){    	
         res.render('principal');
     });
     
@@ -163,13 +163,13 @@ Novamente isso ocorre porque não existe nenhuma rota programada na nossa aplica
 
 2. No nosso arquivo de rotar vamos implementar a rota '/gerarTabuada'. O arquivo `routes.js` com as duas rotas ficará da seguinte forma:
 ```js
-module.exports = function(appliction){
+module.exports = function(application){
 
-    appliction.get('/', function(req,res){    	
+    application.get('/', function(req,res){    	
         res.render('principal');
     });
 
-    appliction.post('/gerarTabuada', function(req,res){
+    application.post('/gerarTabuada', function(req,res){
         res.render('calculoTabuada');
     });
     	
@@ -222,7 +222,7 @@ Agora quando chegar uma requisição via post no endereço `/gerarTabuada` da no
 
 1. Uma técnica muito interessante para saber por onde vão passando os nossos dados através das rotas é a utilização do comando `js console.log`. Na nossa rota `/gerarTabada` antes de responder ao cliente vamos adicionar uma linha de código para registrar no servidor o que recebemos do formulário do lado cliente. Essa rota no arquivo `routes.js` ficaria assim:
 ```js
-    appliction.post('/gerarTabuada', function(req,res){ 
+    application.post('/gerarTabuada', function(req,res){ 
     	console.log('Dados recebidos na requisição:', req.body);
         res.render('calculoTabuada');
     });
@@ -283,7 +283,7 @@ Dados recebidos na requisição: { numero: '4' }
 1. Uma vez que no servidor recebemos os dados via POST, para que esses dados sejam usados em outras views, precisamos enviá-los por parámetro para a view. Fazemos isso precisamente na rota:
 ```js
 	...
-    appliction.post('/gerarTabuada', function(req,res){ 
+    application.post('/gerarTabuada', function(req,res){ 
     	console.log('Dados recebidos na requisição:', req.body);
         res.render('calculoTabuada', { numero : req.body.numero } );
     });

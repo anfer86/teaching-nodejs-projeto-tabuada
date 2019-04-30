@@ -1149,9 +1149,9 @@ Isso ocorre pelo fato de que a aplicação está online mas não tem nada para r
 <ol>
 <li>
 <p>Vamos criar um arquivo de rotas na pasta routes para orientar a nossa aplicação a que responder quando for feito um pedido na raíz (&lsquo;/&rsquo;) da nossa aplicação. 
-<div class="codehilite"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">appliction</span><span class="p">){</span>
+<div class="codehilite"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">application</span><span class="p">){</span>
 
-    <span class="nx">appliction</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+    <span class="nx">application</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
         <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;&lt;h1&gt;Projeto Tabuada&lt;/h1&gt;&#39;</span><span class="p">);</span>
     <span class="p">});</span>
 
@@ -1191,9 +1191,9 @@ Quando a aplicação receber uma requisição (req) HTTP, que pede o diretório 
 </li>
 <li>
 <p>Devemos alterar a rota raíz &lsquo;/&rsquo; para que ao invés de enviar (send) uma mensagem ao cliente renderize uma página web. Para isso alteramos o conteúdo da rota para o seguinte código:
-<div class="codehilite"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">appliction</span><span class="p">){</span>
+<div class="codehilite"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">application</span><span class="p">){</span>
 
-    <span class="nx">appliction</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>      
+    <span class="nx">application</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>     
         <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;principal&#39;</span><span class="p">);</span>
     <span class="p">});</span>
 
@@ -1224,13 +1224,13 @@ Novamente isso ocorre porque não existe nenhuma rota programada na nossa aplica
 </li>
 <li>
 <p>No nosso arquivo de rotar vamos implementar a rota &lsquo;/gerarTabuada&rsquo;. O arquivo <code>routes.js</code> com as duas rotas ficará da seguinte forma:
-<div class="codehilite"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">appliction</span><span class="p">){</span>
+<div class="codehilite"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">application</span><span class="p">){</span>
 
-    <span class="nx">appliction</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>      
+    <span class="nx">application</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>     
         <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;principal&#39;</span><span class="p">);</span>
     <span class="p">});</span>
 
-    <span class="nx">appliction</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/gerarTabuada&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+    <span class="nx">application</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/gerarTabuada&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
         <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;calculoTabuada&#39;</span><span class="p">);</span>
     <span class="p">});</span>
 
@@ -1284,7 +1284,7 @@ Agora quando chegar uma requisição via post no endereço <code>/gerarTabuada</
 <ol>
 <li>
 <p>Uma técnica muito interessante para saber por onde vão passando os nossos dados através das rotas é a utilização do comando <code>js console.log</code>. Na nossa rota <code>/gerarTabada</code> antes de responder ao cliente vamos adicionar uma linha de código para registrar no servidor o que recebemos do formulário do lado cliente. Essa rota no arquivo <code>routes.js</code> ficaria assim:
-<div class="codehilite"><pre>    <span class="nx">appliction</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/gerarTabuada&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span> 
+<div class="codehilite"><pre>    <span class="nx">application</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/gerarTabuada&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span> 
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Dados recebidos na requisição:&#39;</span><span class="p">,</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
         <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;calculoTabuada&#39;</span><span class="p">);</span>
     <span class="p">});</span>
@@ -1343,7 +1343,7 @@ Dados recebidos na requisição: { numero: &#39;4&#39; }
 <li>
 <p>Uma vez que no servidor recebemos os dados via POST, para que esses dados sejam usados em outras views, precisamos enviá-los por parámetro para a view. Fazemos isso precisamente na rota:
 <div class="codehilite"><pre>    <span class="p">...</span>
-    <span class="nx">appliction</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/gerarTabuada&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span> 
+    <span class="nx">application</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/gerarTabuada&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span> 
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Dados recebidos na requisição:&#39;</span><span class="p">,</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
         <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;calculoTabuada&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">numero</span> <span class="o">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">numero</span> <span class="p">}</span> <span class="p">);</span>
     <span class="p">});</span>

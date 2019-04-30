@@ -1,6 +1,6 @@
-module.exports = function(appliction){
+module.exports = function(application){
 
-    appliction.get('/', function(req,res){
+    application.get('/', function(req,res){
         res.send('<h1>Projeto Tabuada</h1>');
     });
     
