@@ -30,7 +30,6 @@ $ npm install consign --save
 		- routes
 	- app.js
 	- package.json (já foi criado pelo init)
-	- readme.md (baixar este arquivo pelo SIGAa com as instruções)
 
 ### Etapa 2: Configurando a aplicação
 
@@ -53,7 +52,7 @@ app.set('views', './app/views' );
 
 /* Uma especie de autoload do PHP */
 consign()
-	.include('app/routes')
+	.include('./app/routes')
 	.into(app);
 
 /* exportar a o objeto app para a nossa aplicação. 
@@ -263,7 +262,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 /* Uma especie de autoload do PHP */
 consign()
-	.include('app/routes')
+	.include('./app/routes')
 	.into(app);
 ...
 ```
@@ -374,13 +373,13 @@ Observer que existe uma diferença entre usar `<%= %>` e `<% %>`. Ao usar `<%= %
 
 ### Etapa 7: Criação de um repositório Git
 
-1. Acessar o site https://github.com/ e registrar-se.
+1. Acessar o site https://github.com/ e realizar o cadastro e login.
 
-2. Criar um repositório com o nome `learning-nodejs-projeto-tabuada`. A configuração para o arquivo `.gitignore` sera `Node`. O endereço do seu projeto no GitHub será https://github.com/<username>/learning-nodejs-projeto-tabuada.git.
+2. Criar um novo repositório com o nome `learning-nodejs-projeto-tabuada`. A configuração para o arquivo `.gitignore` deve ser `Node`. O endereço do seu projeto no GitHub será `https://github.com/username/learning-nodejs-projeto-tabuada.git`.
 
 3. No diretório anterior ao do seu projeto criar um clone do seu repositório com o seguinte comando:
 ```bash
-$ git clone https://github.com/<username>/learning-nodejs-projeto-tabuada.git
+$ git clone https://github.com/username/learning-nodejs-projeto-tabuada.git
 ```
 Com isso será criada uma pasta com o nome `learning-nodejs-projeto-tabuada`.
 
@@ -406,7 +405,7 @@ $ git commit -m 'Primeira versão do Projeto Tabuada'
 $ git push
 ```
 
-9. Acessar o link do projeto https://github.com/<username>/learning-nodejs-projeto-tabuada
+9. Acessar o link do projeto `https://github.com/username/learning-nodejs-projeto-tabuada`
 
 ### Etapa 8: Criar um arquivo de readme
 

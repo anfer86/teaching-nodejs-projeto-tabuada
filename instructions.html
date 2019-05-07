@@ -1089,7 +1089,6 @@ Esse commando permite criar os arquivos iniciais de configuração da aplicaçã
 </li>
 <li>app.js</li>
 <li>package.json (já foi criado pelo init)</li>
-<li>readme.md (baixar este arquivo pelo SIGAa com as instruções)</li>
 </ul>
 </li>
 </ol>
@@ -1114,7 +1113,7 @@ Esse commando permite criar os arquivos iniciais de configuração da aplicaçã
 
 <span class="cm">/* Uma especie de autoload do PHP */</span>
 <span class="nx">consign</span><span class="p">()</span>
-    <span class="p">.</span><span class="nx">include</span><span class="p">(</span><span class="s1">&#39;app/routes&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">include</span><span class="p">(</span><span class="s1">&#39;./app/routes&#39;</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">into</span><span class="p">(</span><span class="nx">app</span><span class="p">);</span>
 
 <span class="cm">/* exportar a o objeto app para a nossa aplicação. </span>
@@ -1323,7 +1322,7 @@ Além disso, nesse mesmo arquivo precisamos configurar esse módulo no nosso obj
 
 <span class="cm">/* Uma especie de autoload do PHP */</span>
 <span class="nx">consign</span><span class="p">()</span>
-    <span class="p">.</span><span class="nx">include</span><span class="p">(</span><span class="s1">&#39;app/routes&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">include</span><span class="p">(</span><span class="s1">&#39;./app/routes&#39;</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">into</span><span class="p">(</span><span class="nx">app</span><span class="p">);</span>
 <span class="p">...</span>
 </pre></div></p>
@@ -1436,14 +1435,14 @@ Observer que existe uma diferença entre usar <code>&lt;%= %&gt;</code> e <code>
 <h3 id="etapa-7-criacao-de-um-repositorio-git">Etapa 7: Criação de um repositório Git<a class="headerlink" href="#etapa-7-criacao-de-um-repositorio-git" title="Permanent link"></a></h3>
 <ol>
 <li>
-<p>Acessar o site <a href="https://github.com/">https://github.com/</a> e registrar-se.</p>
+<p>Acessar o site <a href="https://github.com/">https://github.com/</a> e realizar o cadastro e login.</p>
 </li>
 <li>
-<p>Criar um repositório com o nome <code>learning-nodejs-projeto-tabuada</code>. A configuração para o arquivo <code>.gitignore</code> sera <code>Node</code>. O endereço do seu projeto no GitHub será <a href="https://github.com/">https://github.com/</a><username>/learning-nodejs-projeto-tabuada.git.</p>
+<p>Criar um novo repositório com o nome <code>learning-nodejs-projeto-tabuada</code>. A configuração para o arquivo <code>.gitignore</code> deve ser <code>Node</code>. O endereço do seu projeto no GitHub será <code>https://github.com/username/learning-nodejs-projeto-tabuada.git</code>.</p>
 </li>
 <li>
 <p>No diretório anterior ao do seu projeto criar um clone do seu repositório com o seguinte comando:
-<div class="codehilite"><pre><span class="nv">$ </span>git clone https://github.com/&lt;username&gt;/learning-nodejs-projeto-tabuada.git
+<div class="codehilite"><pre><span class="nv">$ </span>git clone https://github.com/username/learning-nodejs-projeto-tabuada.git
 </pre></div>
 Com isso será criada uma pasta com o nome <code>learning-nodejs-projeto-tabuada</code>.</p>
 </li>
@@ -1471,7 +1470,7 @@ Com isso será criada uma pasta com o nome <code>learning-nodejs-projeto-tabuada
 </pre></div></p>
 </li>
 <li>
-<p>Acessar o link do projeto <a href="https://github.com/">https://github.com/</a><username>/learning-nodejs-projeto-tabuada</p>
+<p>Acessar o link do projeto <code>https://github.com/username/learning-nodejs-projeto-tabuada</code></p>
 </li>
 </ol>
 <h3 id="etapa-8-criar-um-arquivo-de-readme">Etapa 8: Criar um arquivo de readme<a class="headerlink" href="#etapa-8-criar-um-arquivo-de-readme" title="Permanent link"></a></h3>
